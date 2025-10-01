@@ -60,3 +60,11 @@ if movies_found == 0:
     print("No movies found of that name!") """
 
 #File 6
+genre = input("Search a movie.")
+print(f"Here are the results for '{name}':")
+for i in range(len(data)):
+    if data[i]['title'] == name:
+        print(data[i]['title'])
+        genre = genre + 1
+if movies_found == 0:
+    print("No movies found of that name!")
