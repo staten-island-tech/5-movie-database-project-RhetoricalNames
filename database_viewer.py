@@ -20,4 +20,4 @@ movies = open("./movies.json", encoding="utf8")
 data = json.load(movies)
 
 #File 1
-print(f"data["title"])
+print(data[1][title])
