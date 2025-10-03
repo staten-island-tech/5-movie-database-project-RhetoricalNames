@@ -15,6 +15,7 @@ Develop a function that allows users to search for a specific movie and returns 
 
 File 6
 Develop a function that allows users to search for movies by genre """
+
 import json
 movies = open("./movies.json", encoding="utf8")
 data = json.load(movies)
@@ -60,11 +61,9 @@ if movies_found == 0:
     print("No movies found of that name!") """
 
 #File 6
-genre = input("Search a movie.")
-print(f"Here are the results for '{name}':")
+genre = input("Search a genre.")
+print(f"Here are the results for the genre '{genre}':")
 for i in range(len(data)):
-    if data[i]['title'] == name:
+    if data[i]["genres"] == genre:
         print(data[i]['title'])
         genre = genre + 1
-if movies_found == 0:
-    print("No movies found of that name!")
