@@ -61,7 +61,7 @@ if movies_found == 0:
     print("No movies found of that name!") """
 
 #File 6
-genre = input("Search a genre.")
+genre = input("Search a genre, or several genres.")
 print(f"Here are the results for the genre '{genre}':")
 for i in range(len(data)):
     if data[i]["genres"] == genre:
