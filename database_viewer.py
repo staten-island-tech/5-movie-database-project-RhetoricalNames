@@ -64,10 +64,8 @@ movie_name_finder(1)
 def movie_finder(genre):
     genre_list = []
     genre_list.append(genre)
-    found_movies = 0
     print(f"Here are the results for the genre(s) '{genre_list}':")
     for i in range(len(data)):
         if data[i]["genres"] == genre_list:
             print(data[i]['title'])
-            found_movies += 1
 movie_finder("Drama")
