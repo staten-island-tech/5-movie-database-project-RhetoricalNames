@@ -63,8 +63,16 @@ movie_name_finder(1) """
 #File 6
 def movie_finder(genres):
     genres = genres.split(", ")
+    print(genres)
     print(f"Here are the results for the genre(s) '{genres}':")
     for i in range(len(data)):
-        if data[i]["genres"] == genres:
-            print(data[i]['title'])
-movie_finder("Drama, Crime")
+        for a in range(len(genres)):
+            if genres[a] in data[i]["genres"]:
+                print(data[i]['title'])
+movie_finder("Horror, Supernatural")
+
+lista = ["a, b, c"]
+if ["a"] in lista:
+    print("yes")
+else:
+    print("no")
