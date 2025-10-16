@@ -21,7 +21,7 @@ movies = open("./movies.json", encoding="utf8")
 data = json.load(movies)
 
 #File 1
-for i in range(len(data)):
+""" for i in range(len(data)):
     print(data[i]['title'])
 
 #File 2
@@ -58,14 +58,13 @@ def movie_name_finder(name):
             movies_found = movies_found + 1
     if movies_found == 0:
         print("No movies found of that name!")
-movie_name_finder(1)
+movie_name_finder(1) """
 
 #File 6
-def movie_finder(genre):
-    genre_list = []
-    genre_list.append(genre)
-    print(f"Here are the results for the genre(s) '{genre_list}':")
+def movie_finder(genres):
+    genres = genres.split(", ")
+    print(f"Here are the results for the genre(s) '{genres}':")
     for i in range(len(data)):
-        if data[i]["genres"] == genre_list:
+        if data[i]["genres"] == genres:
             print(data[i]['title'])
-movie_finder("Drama")
+movie_finder("Drama, Crime")
