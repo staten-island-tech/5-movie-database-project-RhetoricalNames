@@ -70,9 +70,3 @@ def movie_finder(genres):
             if genres[a] in data[i]["genres"]:
                 print(data[i]['title'])
 movie_finder("Horror, Supernatural")
-
-lista = ["a, b, c"]
-if ["a"] in lista:
-    print("yes")
-else:
-    print("no")
