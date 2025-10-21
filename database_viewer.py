@@ -66,7 +66,6 @@ def movie_finder(genres):
     print(genres)
     print(f"Here are the results for the genre(s) '{genres}':")
     for i in range(len(data)):
-        for a in range(len(genres)):
-            if genres[a] in data[i]["genres"]:
-                print(data[i]['title'])
-movie_finder("Horror, Supernatural")
+        if genres == data[i]["genres"]:
+            print(data[i]['title'])
+movie_finder("Horror, Drama, Supernatural")
